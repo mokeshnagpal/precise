@@ -38,11 +38,9 @@ Session(app)  # Initialize Flask-Session
 # Load Firebase key content from the environment variable
 firebase_key_json = getenv('FIREBASE_KEY')
 
-# Parse it into a dictionary
-if firebase_key_json is not None:
-    key_dict = loads(firebase_key_json)
-    cred = credentials.Certificate(key_dict)
-    initialize_app(cred)
+key_dict = loads(firebase_key_json)
+cred = credentials.Certificate(key_dict)
+initialize_app(cred)
 
 db = firestore.client()  # Firestore client
 
