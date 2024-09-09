@@ -9,4 +9,3 @@ flask_mail
 datetime
 uuid
 python-dotenv
-json
