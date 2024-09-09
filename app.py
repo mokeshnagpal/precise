@@ -8,7 +8,8 @@ from flask_mail import Mail, Message
 from datetime import datetime, timedelta
 from uuid import uuid4
 from dotenv import load_dotenv
-import os
+from os import getenv
+from json import loads
 
 # Load environment variables from .env file
 load_dotenv()
@@ -34,8 +35,14 @@ mail = Mail(app)
 Session(app)  # Initialize Flask-Session
 
 # Firebase initialization
-cred = credentials.Certificate(os.getenv('FIREBASE_KEY'))
-initialize_app(cred)
+# Load Firebase key content from the environment variable
+firebase_key_json = getenv('FIREBASE_KEY')
+
+# Parse it into a dictionary
+if firebase_key_json is not None:
+    key_dict = loads(firebase_key_json)
+    cred = credentials.Certificate(key_dict)
+    initialize_app(cred)
 
 db = firestore.client()  # Firestore client
 
