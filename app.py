@@ -37,9 +37,9 @@ Session(app)
 firebase_key = getenv('FIREBASE_KEY')
 cred = credentials.Certificate(loads(firebase_key))
 initialize_app(cred)
-
+print(cred)
 db = firestore.client()  
-
+print(db)
 node = 9
 signal = 4
 values = full((node, signal), {}, dtype=object) 
