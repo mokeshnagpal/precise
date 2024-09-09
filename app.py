@@ -7,6 +7,10 @@ from numpy import full
 from flask_mail import Mail, Message
 from datetime import datetime, timedelta
 from uuid import uuid4
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 website_name = "precise"
 website_link = f'{website_name}.onrender.com'
@@ -29,19 +33,7 @@ mail = Mail(app)
 Session(app)  # Initialize Flask-Session
 
 # Firebase initialization
-cred = credentials.Certificate({
-  "type": "service_account",
-  "project_id": "ai-based-traffic-managem-f30b3",
-  "private_key_id": API_KEY,
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC8fJQAd/1d6zsJ\n+k+OmTPtcYBIumSEuGQLHiZCcT/1IBv/sJQCKHoomDLz3OIoRvkg1tNpEW/YuWCL\n4qs/pkCrS75dfsHVOsvhokgAq5GOQDFlj8/0FFz4lOnBVnCcnL0GjidWiX1ZKwwB\nOjoO2dsokOizgixxIGhempFKQ3pc7lgyKFjuixBh+30qebNny75GQB3YBhTC17VV\nWB2QRDmJD6wYYwdNYcYTVGO4U1w3dqmLKJliwv0A6KC11sePERy9Ptw2mUPRgJJu\nuDoUrcIU86VYvjxjCb9+bcXWvV/smX7RHZQ0BqNw0ge/UWucJnTC8lEo11ZPAAij\n0H5SaFQ3AgMBAAECggEAD6mTINYtAyS8s1pjSa2ttMw1hUBGgbLSzrZde9ruSMpi\nGTqilJVUJVMUX32aJg+pEaitnkb5J3tWrE5pvYXCokP5Lcq5L6Si9Ce92km8yXhz\nF7CTbqxR127ZsnD3iu6z/xCemzXHPpAcVMPHtvE1IWdSjDbDxk4TmNI47YCy8SLQ\n5odENLA7MGmyREJJ8bILwJZlT13KKl0v9a+rm+oWji0aPruA/L2231gx6RXoG0R5\ncYBkJP9k6YifzwiQ5CUuKr3yzEvY0BBWmOjGypgVAiFTa3WnicBGWWZF67b9coYm\n2DebzQXsEbfrdyJcJP9xzEA2Z/m5QyabU2lw+NtsOQKBgQD9f/AdV5N8r+ofJVG1\nC4oUexw9HBdIijKgoHctvP8abRLU3PeqROy5h2sEw8mxYUxltzBXXJE7eIK9wzkg\nBinnNj11L1hPWjia+teX4S8yiEm/y2TXlSp3fuYck5KagALdCDjuYLtFMbHNzrFv\nYeFJRAC2LPsfvELjTQd520HAyQKBgQC+WH0IxJV545a4wZ5B2XrD6INxZeUWyPm2\nT8/x78l5opa9/xCGZZJIbLXkfjHgvz6kGjVGmttNzS1r0CoggEIRy/ohQ6EU//17\nZsag5hnZJZb/OJLonsdPYMzds2lk+lhwLGuFmk1Ih6kPJuOB8SD1o3gEwnTysOym\nIiOPpLDs/wKBgDS8ovVXvMUZy7kDCIaDigxMuEk2SNm8dl/YQjLvuJqEyoAiIBv6\nDs1iEK+DE7ilJ0GZ5KKoDUa0AW786CtzXNBPBmYUnWiUumXzfVqJbEo09DLEW4xF\n6fnGGpUjVkJyEyZsiXt+ADea6QSJ1Xv4fufBD+zWWr/1aGzlH4MITBuRAoGAepDQ\nMk0jUxFRhDZoiU5Y1r1ppiNOmJVg9hv+cnNM8J3ZIw6SvXe58hjOJwt7YpTC6ThX\nBdfBTx/HF507AyKTaJJHxhOeLb+IoWVUkVaZXlHuIPl034UeIebbBAb63qK1P8Xa\nlnT9Pq7cFX2dEZcK+iEAr0/nrj5uo6tn6p7JrlECgYAonsqJ1Qk4OR4RYvL+eLhx\nG40EI8y/o/vqsf9dtD5pn+W0ru37nrgfN5ZmSE8QuWcqETJtLnb2p0Jo6Cg7epIh\n97fwmPySXriCA2ZzAwoZxl3eh28YmYDFrl+AxC2XrDCSSiN8JYF1nZVkAGzCSzE2\nK5AHdtjZzDJnj02Sb5ckng==\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-pf2xa@ai-based-traffic-managem-f30b3.iam.gserviceaccount.com",
-  "client_id": "112093004985562674312",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-pf2xa%40ai-based-traffic-managem-f30b3.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-})
+cred = credentials.Certificate(os.getenv('FIREBASE_KEY'))
 initialize_app(cred)
 
 db = firestore.client()  # Firestore client
