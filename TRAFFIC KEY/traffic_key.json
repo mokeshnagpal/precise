@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ai-based-traffic-managem-f30b3",
+  "private_key_id": "ca852466a1755d4b7a0bf04f41bb7325949fd09f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDj6bgFJwSY1t2x\ngcYAu85Hi+fcBSCy+qk2hb6jj04zRzuKvTtMEHT6p7PKsS0TQ00JJYyFo8C/FOp6\n+cbFL3ziizcBvsA4QVsPNrHUuHcGlZqhkH6p2fD8IoiTh3nWIm7on0Tl8jgXkANo\neawy2iOOq+XTk+faHtGbktwJEIWnUEAIwc/rH0tF751HzdfpurnhjkruBvvd6MAh\njp2Jo/tnlpRALxL5anCJ2JlKBkwyDNutMerc6T13LBYi+C8CRtiHAfxl5KNRkn7d\nXzz+5ymPe71J3fS4crEBLqj/Y8zebRCGALWg4Ix9snkwISKuaficES8Q9KUxs2cS\nTnG8sbhfAgMBAAECggEAWhPPhUnMiVOyvytZRIT1nFVxSAZGzDZBlqj5lc9XyvCG\nWek8fG2srjyF1MB93jUlR04t4cu8rEjp+7yokNqZ8zeuf+QSOKmsAbFOS5K0iEes\nm9puFVdr5VsIu7Y5syZcy1fXdUJsZPOoRSyBoH+Suhq6dQrqAc1YbrJ2gKalDGDu\nPPVao60uxnM19/NnKZRGXbtKKTmcUSygvvIXXpwozVJmGFAf/zYiUXpMLnNADvbG\nalI/UPbvymZsKw1rqdi2kJUdl8yWxcMG5fyZdtA3t37ditDLaHgfH916kEC5cE4F\nbV59gxaichBTSrpDPVgFvm6MgghoLVVmDXDdRcN0gQKBgQD6pt3iBLMqlRdweJF3\nY6g8hHhApCBvr5LQd3kUx7B2kf9m/tKe7O4nZD09PAfpKV1KwCyz49ovOtfDOuOj\nuHiwiIBoBNnK+Ut48r/t9wndBbOaADaxnlOD7BW0KIVbgZoXRzlquMJ1Eqh1N0/D\nPM/ve9chsNDwLkfGU7OTYrX4IQKBgQDoxqVU7y5K6pVb7A/kBcqJ/pqoJDAQnGNR\nsTYvlSUAQ3FPMBpATkm1BKtVpJApfZkoHINy/iLp7jqFxZJLIemCah6vO65o6nR6\n8h5vPJXvf6fKARD5CwZLL/lxoT+jqLHJrCs5k0v0gMZmTSrRZ0BNpybyvnAajtwW\nXlntcnegfwKBgGPHk6KK7mvwKAGM7ZOSZ4GX1msdKxBq204DkX7VM4kv+3Ub0eqU\nNQYXYE2FHT0TS2EbeXAvL0cH7KZ6Re6B3AGihUNjUvP7I7FFKWRoqFOFFociuKMi\nfOqSS92JF/VidV3464FxhW+nesoWt7jn93rFWNG/mp1SPx5TabQtYnUhAoGBAJb7\nIYmxiYk2FqKEvtnbl79h0NZ2gmaDyTfXhZnfVxyQohIG1UAYh15OJQNrtcXznT+T\nHv+bLvIkfvj9aSIqYNciFbz7LOkICX0lRfBIj8fEOQShJG0kZXSnLVgyiqCQbqCs\nd2zkyUNRs13vd3JTUjYL0Qtp0jSnrMEleZa1xDnpAoGBAIK8D+IYzkGzw2jsRmg0\nwJ/xZH/uPHnyqKdwfTH1I45gLKTBPEbZxzUMbj2meVgntHlu3ZF/CZjrcubCZxWD\nJMYT9FpP6lTV07pucFmOI+jIu3Ld5ZHClqjZNhbGjAjp7VfXMewp285c1cg7OoRw\n7CjIHKwuge3UM430mv6BA14F\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-pf2xa@ai-based-traffic-managem-f30b3.iam.gserviceaccount.com",
+  "client_id": "112093004985562674312",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-pf2xa%40ai-based-traffic-managem-f30b3.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
