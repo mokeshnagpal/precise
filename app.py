@@ -35,7 +35,7 @@ mail = Mail(app)
 Session(app) 
 
 firebase_key = getenv('FIREBASE_KEY')
-cred = credentials.Certificate(json.loads(firebase_key))
+cred = credentials.Certificate(loads(firebase_key))
 initialize_app(cred)
 
 db = firestore.client()  
