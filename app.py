@@ -32,22 +32,16 @@ app.config['MAIL_PASSWORD'] = 'zumfuvcevvyvowdc'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(True)
 
 mail = Mail(app)
-Session(app)  # Initialize Flask-Session
+Session(app) 
 
-# Firebase initialization
-# Load Firebase key content from the environment variable
-
-firebase_key_json = getenv('FIREBASE_KEY')
-
-key_dict = loads(firebase_key_json)
-cred = credentials.Certificate(key_dict)
+cred = credentials.Certificate(getenv('FIREBASE_KEY'))
 initialize_app(cred)
 
-db = firestore.client()  # Firestore client
+db = firestore.client()  
 
 node = 9
 signal = 4
-values = full((node, signal), {}, dtype=object)  # Matrix to store node and signal values
+values = full((node, signal), {}, dtype=object) 
 
 def validate_email(email):
     # Validates email using regex for stricter checking
