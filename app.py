@@ -15,7 +15,6 @@ app = Flask(__name__)
 
 # Session configuration
 app.config['SESSION_TYPE'] = 'filesystem'
-app.config['SECRET_KEY'] = 'your_secret_key'  # Ensure this is a secure random value
 
 # Email configuration for Flask-Mail using Gmail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
