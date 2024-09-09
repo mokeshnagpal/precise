@@ -8,6 +8,7 @@ from flask_mail import Mail, Message
 from datetime import datetime, timedelta
 from uuid import uuid4
 from dotenv import load_dotenv
+import os
 
 # Load environment variables from .env file
 load_dotenv()
