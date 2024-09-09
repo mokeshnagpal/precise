@@ -34,7 +34,8 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(True)
 mail = Mail(app)
 Session(app) 
 
-cred = credentials.Certificate(getenv('FIREBASE_KEY'))
+firebase_key = os.getenv('FIREBASE_KEY')
+cred = credentials.Certificate(json.loads(firebase_key))
 initialize_app(cred)
 
 db = firestore.client()  
