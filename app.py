@@ -38,7 +38,6 @@ Session(app)  # Initialize Flask-Session
 # Load Firebase key content from the environment variable
 
 firebase_key_json = getenv('FIREBASE_KEY')
-print(firebase_key_json)  # Debugging to check if the key is loaded
 
 key_dict = loads(firebase_key_json)
 cred = credentials.Certificate(key_dict)
