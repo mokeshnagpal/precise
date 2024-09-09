@@ -29,7 +29,7 @@ mail = Mail(app)
 Session(app)  # Initialize Flask-Session
 
 # Firebase initialization
-cred = credentials.Certificate('TRAFFIC_KEY')
+cred = credentials.Certificate(TRAFFIC_KEY)
 initialize_app(cred)
 
 db = firestore.client()  # Firestore client
